@@ -83,8 +83,8 @@ img {
 
 #modal img {
     position: absolute;
-    top: 0;
-    right: 8px;
+    top: 16px;
+    right: 24px;
 }
 
 #modal button {
