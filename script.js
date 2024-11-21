@@ -21,8 +21,8 @@ function mode() {
     fetch('./res/things.txt')
         .then(response => { return response.text(); })
         .then(data => {
-            const lines = data.split();
-            document.getElementById('thing').innerText = lines[Math.floor(Math.random() * lines.length)];
+            thing = data;
+            document.getElementById('thing').innerText = data;
         });
     document.getElementById('next').innerText = 'Revert';
     document.getElementById('modal').style.display = 'none';
