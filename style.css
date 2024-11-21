@@ -63,6 +63,64 @@ a:hover {
     color: #cdd6f4;
 }
 
+:link, :visited { color: #cdd6f4; }
+
+img {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+}
+
+#modal {
+    position: absolute;
+    background: #1e1e2e;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-content: end;
+}
+
+#modal img {
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+
+#modal button {
+    width: 80%;
+    margin: 16px;
+    padding: 8px;
+}
+
+@media (max-width: 813px) {
+    body {
+        font-size: 16pt;
+        margin: 8px;
+    }
+
+    h1 {
+        font-size: 28pt;
+    }
+
+    h2 {
+        font-size: 30pt;
+        overflow: hidden;
+    }
+
+    button {
+        font-size: 16pt;
+    }
+
+    footer {
+        display: none;
+    }
+
+    img {
+        display: block;
+    }
+}
+
 .rosewater { color: #f5e0dc; }
 .flamingo { color: #f2cdcd; }
 .pink { color: #f5c2e7; }

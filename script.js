@@ -4,20 +4,34 @@ document.getElementById('header').classList.add(color);
 document.getElementById('thing').classList.add(color);
 document.getElementById('a').classList.add(color);
 
-fetch('./things.txt')
+fetch('./res/things.txt')
     .then(response => { return response.text(); })
     .then(data => {
         const lines = data.split('\n');
         document.getElementById('thing').innerText = lines[Math.floor(Math.random() * lines.length)];
 });
 
-document.getElementById('next').addEventListener('click', function() { location.reload(); });
-document.getElementById('mode').addEventListener('click', function() {
-    fetch('./things.txt')
+function next() {
+    location.reload();
+    document.getElementById('modal').style.display = 'none';
+}
+
+function mode() {
+    fetch('./res/things.txt')
         .then(response => { return response.text(); })
         .then(data => {
             const lines = data.split();
             document.getElementById('thing').innerText = lines[Math.floor(Math.random() * lines.length)];
         });
     document.getElementById('next').innerText = 'Revert';
-});
+    document.getElementById('modal').style.display = 'none';
+}
+
+document.getElementById('next').addEventListener('click', function() { next(); });
+document.getElementById('mode').addEventListener('click', function() { mode(); });
+
+document.getElementById('modalNext').addEventListener('click', function() { next(); });
+document.getElementById('modalMode').addEventListener('click', function() { mode(); });
+
+document.getElementById('menu').addEventListener('click', function() { document.getElementById('modal').style.display = 'block'; });
+document.getElementById('close').addEventListener('click', function() { document.getElementById('modal').style.display = 'none'; });
