@@ -5,7 +5,7 @@ a pen
 multiple pens
 a pencil
 multiple pencils
-broomstick handle
+broomstick
 a fishing rod
 an umbrella
 a toothbrush
@@ -16,10 +16,44 @@ a glass jar
 a screwdriver
 hammer handle
 a cigar
+multiple cigars
 a banana
-a zucchini
+multiple bananas
+a pickle
+multiple pickles
 a carrot
+multiple carrots
+a zucchini
+a potato
 a finger
+multiple fingers
 your wrist
 someone's wrist
 someone's entire arm
+a coin
+multiple coins
+a stiff cock
+multiple stiff cocks
+a metal pipe
+a lead pipe
+a copper pipe
+an aluminium pipe
+a knife
+multiple knifes
+a road cone
+a bottle
+french fries
+a root beer can
+a monster can
+a brick
+an octopus
+a machine gun
+a pistol
+a shotgun
+a microphone
+a test tube
+multiple test tubes
+guitar neck
+a drumstick
+a buttplug
+a comb
