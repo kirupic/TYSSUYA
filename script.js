@@ -1,16 +1,16 @@
-'use strict'
-
 const colors = ['rosewater', 'flamingo', 'pink', 'mauve', 'red', 'maroon', 'peach', 'yellow', 'green', 'teal', 'sky', 'sapphire', 'blue', 'lavender'];
 let color = colors[Math.floor(Math.random() * colors.length)];
 document.getElementById('header').classList.add(color);
 document.getElementById('thing').classList.add(color);
 document.getElementById('a').classList.add(color);
 
+let thing;
 fetch('./res/things.txt')
     .then(response => { return response.text(); })
     .then(data => {
         const lines = data.split('\n');
-        document.getElementById('thing').innerText = lines[Math.floor(Math.random() * lines.length)];
+        thing = lines[Math.floor(Math.random() * lines.length)]
+        document.getElementById('thing').innerText = thing;
 });
 
 function next() {
@@ -35,9 +35,7 @@ document.getElementById('modalNext').addEventListener('click', function() { next
 document.getElementById('modalMode').addEventListener('click', function() { mode(); });
 
 document.getElementById('menu').addEventListener('click', function() {
-    if (document.getElementById('menu').style.display != 'block') {
-        document.getElementById('thing').innerText = 0;
-    }
+    if (document.getElementById('menu').style.display != 'block') { document.getElementById('thing').innerText = thing; }
     document.getElementById('modal').style.display = 'block';
 });
 document.getElementById('close').addEventListener('click', function() { document.getElementById('modal').style.display = 'none'; });
