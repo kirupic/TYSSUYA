@@ -1,5 +1,7 @@
-colors = ['rosewater', 'flamingo', 'pink', 'mauve', 'red', 'maroon', 'peach', 'yellow', 'green', 'teal', 'sky', 'sapphire', 'blue', 'lavender'];
-color = colors[Math.floor(Math.random() * colors.length)];
+'use strict'
+
+const colors = ['rosewater', 'flamingo', 'pink', 'mauve', 'red', 'maroon', 'peach', 'yellow', 'green', 'teal', 'sky', 'sapphire', 'blue', 'lavender'];
+let color = colors[Math.floor(Math.random() * colors.length)];
 document.getElementById('header').classList.add(color);
 document.getElementById('thing').classList.add(color);
 document.getElementById('a').classList.add(color);
@@ -13,7 +15,6 @@ fetch('./res/things.txt')
 
 function next() {
     location.reload();
-    document.getElementById('modal').style.display = 'none';
 }
 
 function mode() {
@@ -33,5 +34,10 @@ document.getElementById('mode').addEventListener('click', function() { mode(); }
 document.getElementById('modalNext').addEventListener('click', function() { next(); });
 document.getElementById('modalMode').addEventListener('click', function() { mode(); });
 
-document.getElementById('menu').addEventListener('click', function() { document.getElementById('modal').style.display = 'block'; });
+document.getElementById('menu').addEventListener('click', function() {
+    if (document.getElementById('menu').style.display != 'block') {
+        document.getElementById('thing').innerText = 0;
+    }
+    document.getElementById('modal').style.display = 'block';
+});
 document.getElementById('close').addEventListener('click', function() { document.getElementById('modal').style.display = 'none'; });
