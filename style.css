@@ -3,7 +3,8 @@
 body {
     display: grid;
     justify-items: center;
-    margin: 64px;
+    margin: 0;
+    padding: 64px;
     background: #1e1e2e;
     color: #cdd6f4;
     font-family: "Lato", sans-serif;
@@ -15,9 +16,8 @@ h1 {
     font-family: "Monsieur La Doulaise", cursive;
     font-size: 50pt;
     line-height: 43px;
+    margin-bottom: 64px ;
 }
-
-p { margin-top: 64px; }
 
 h2 {
     margin: 0;
@@ -28,11 +28,11 @@ h2 {
 footer {
     display: flex;
     position: fixed;
-    bottom: 0;
+    bottom: 16px;
 }
 
 button {
-    margin: 64px 8px 24px 0;
+    margin: 0 8px 0 0;
     padding: 16px;
     background: #1e1e2e;
     color: #cdd6f4;
@@ -42,28 +42,20 @@ button {
     transition: .3s;
 }
 
-button:hover {
-    cursor: pointer;
-    opacity: .8;
-}
+button:hover { cursor: pointer; opacity: .8; }
 
 footer p {
+    margin: 0;
     padding: 16px;
     border: 3px solid;
     border-radius: 10px;
     background: #1e1e2e;
 }
 
-.yes {
-    margin-right: 8px;
-}
+#yes { margin: 0 8px 0 0; }
 
-a:hover {
-    transition: .3s;
-    color: #cdd6f4;
-}
-
-:link, :visited { color: #cdd6f4; }
+a { transition: 0.3s; }
+a:hover { opacity: .8; }
 
 img {
     display: none;
@@ -72,9 +64,10 @@ img {
     right: 32px;
 }
 
-#modal {
+div {
     position: absolute;
     top: 0;
+    right: 0;
     background: #1e1e2e;
     width: 100%;
     height: 100%;
@@ -82,57 +75,21 @@ img {
     align-content: end;
 }
 
-#modal img {
+div img {
     position: absolute;
     top: 16px;
     right: 24px;
 }
 
-#modal button {
+div button {
     width: 80%;
     margin: 16px;
     padding: 8px;
 }
 
 @media (max-width: 813px) {
-    body {
-        font-size: 16pt;
-        margin: 8px;
-    }
-
-    h1 {
-        font-size: 28pt;
-    }
-
-    h2 {
-        font-size: 30pt;
-        overflow: hidden;
-    }
-
-    button {
-        font-size: 16pt;
-    }
-
-    footer {
-        display: none;
-    }
-
-    img {
-        display: block;
-    }
+    body, button { font-size: 16pt; padding: 8px; }
+    h1, h2 { font-size: 28pt; }
+    footer { display: none; }
+    img { display: block; }
 }
-
-.rosewater { color: #f5e0dc; }
-.flamingo { color: #f2cdcd; }
-.pink { color: #f5c2e7; }
-.mauve { color: #cba6f7; }
-.red { color: #f38ba8; }
-.maroon { color: #eba0ac; }
-.peach { color: #fab387; }
-.yellow { color: #f9e2af; }
-.green { color: #a6e3a1; }
-.teal { color: #94e2d5; }
-.sky { color: #89dceb; }
-.sapphire { color: #74c7ec; }
-.blue { color: #89b4fa; }
-.lavender { color: #b4befe; }

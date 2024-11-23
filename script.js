@@ -1,10 +1,13 @@
 const thingElement = document.getElementById('thing');
+const modal = document.getElementById('modal');
 
-const colors = ['rosewater', 'flamingo', 'pink', 'mauve', 'red', 'maroon', 'peach', 'yellow', 'green', 'teal', 'sky', 'sapphire', 'blue', 'lavender'];
+const colors = ['f5e0dc', 'f2cdcd', 'f5c2e7', 'cba6f7', 'f38ba8', 'eba0ac', 'fab387', 'f9e2af', 'a6e3a1', '94e2d5', '89dceb', '74c7ec', '89b4fa', 'b4befe'];
 let color = colors[Math.floor(Math.random() * colors.length)];
-document.getElementById('header').classList.add(color);
-thingElement.classList.add(color);
-document.getElementById('a').classList.add(color);
+
+document.getElementById('header').style.color = '#' + color;
+thingElement.style.color = '#' + color;
+document.getElementById('a').style.color = '#' + color;
+document.getElementById('aModal').style.color = '#' + color;
 
 let thing;
 fetch('./res/things.txt')
@@ -27,7 +30,8 @@ function mode() {
             thingElement.innerText = data;
         });
     document.getElementById('next').innerText = 'Revert';
-    document.getElementById('modal').style.display = 'none';
+    modal.style.display = 'none';
+    document.getElementById('modalNext').innerText = 'Revert'
 }
 
 document.getElementById('next').addEventListener('click', function() { next(); });
@@ -37,9 +41,9 @@ document.getElementById('modalMode').addEventListener('click', function() { mode
 
 document.getElementById('menu').addEventListener('click', function() {
     thingElement.innerText = '';
-    document.getElementById('modal').style.display = 'block';
+    modal.style.display = 'block';
 });
 document.getElementById('close').addEventListener('click', function() {
     thingElement.innerText = thing;
-    document.getElementById('modal').style.display = 'none';
+    modal.style.display = 'none';
 });
