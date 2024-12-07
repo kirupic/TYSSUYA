@@ -18,9 +18,7 @@ fetch('./res/things.txt')
         thingElement.innerText = thing;
 });
 
-function next() {
-    location.reload();
-}
+function next() { location.reload(); }
 
 function mode() {
     fetch('./res/things.txt')
@@ -34,16 +32,12 @@ function mode() {
     document.getElementById('modalNext').innerText = 'Revert'
 }
 
-document.getElementById('next').addEventListener('click', function() { next(); });
-document.getElementById('mode').addEventListener('click', function() { mode(); });
-document.getElementById('modalNext').addEventListener('click', function() { next(); });
-document.getElementById('modalMode').addEventListener('click', function() { mode(); });
-
-document.getElementById('menu').addEventListener('click', function() {
+function menu() {
     thingElement.innerText = '';
     modal.style.display = 'block';
-});
-document.getElementById('close').addEventListener('click', function() {
+}
+
+function close() {
     thingElement.innerText = thing;
     modal.style.display = 'none';
-});
+}

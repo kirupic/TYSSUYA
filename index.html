@@ -17,16 +17,16 @@
     <p>The thing that you should shove up your ass today is...</p>
     <h2 id="thing"></h2>
     <footer>
-        <button id="next">Next item</button>
-        <button id="mode">ULTRAKILL fan mode</button>
+        <button id="next" onclick="next()">Next item</button>
+        <button id="mode" onclick="mode()">ULTRAKILL fan mode</button>
         <p id="yes">Made by <a id="a" href="https://github.com/real-kirpich">kirpich</a></p>
         <p>TYSSUYA 1.4</p>
     </footer>
-    <img id="menu" src="./res/menu.svg" alt="x">
+    <img id="menu" onclick="menu()" src="./res/menu.svg" alt="x">
     <div id="modal">
-        <img id="close" src="./res/close.svg" alt="x">
-        <button id="modalNext">Next item</button>
-        <button id="modalMode">ULTRAKILL fan mode</button>
+        <img id="close" onclick="close()" src="./res/close.svg" alt="x">
+        <button id="modalNext" onclick="next()">Next item</button>
+        <button id="modalMode" onclick="mode()">ULTRAKILL fan mode</button>
         <p>TYSSUYA 1.4 - Made by <a id="aModal" href="https://github.com/real-kirpich">kirpich</a></p>
     </div>
     <script src="./script.js"></script>
