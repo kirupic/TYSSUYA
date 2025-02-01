@@ -4,4 +4,7 @@ Link: https://real-kirpich.github.io/TYSSUYA \
 Current version: 1.4<br>\
 Inspired by this YouTube video: https://youtu.be/q1CfGwekTIQ
 
-TODO: SEO optimization
+TODO:
+- SEO
+- Minor layout issues
+- Add more TYSSUYA
