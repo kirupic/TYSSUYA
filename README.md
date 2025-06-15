@@ -3,8 +3,3 @@ TYSSUYA is a simple webpage that provides daily examples of Things You Should Sh
 Link: https://kirupic.github.io/TYSSUYA \
 Current version: 1.4<br>\
 Inspired by this YouTube video: https://youtu.be/q1CfGwekTIQ
-
-TODO:
-- SEO
-- Minor layout issues
-- Add more TYSSUYA
